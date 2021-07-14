@@ -15,7 +15,6 @@ def get_all_platforms(list_of_dicts):
         platforms.add(data_dict['Platform'])
 
     return platforms
-    
 
 def get_gamesales_by_platforms(list_of_dicts):
     platforms = get_all_platforms(list_of_dicts)
