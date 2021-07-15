@@ -59,3 +59,17 @@ def sum_platform_sales(platform_sale_items, sales_keys):
             sum_sales_by_platform[key] = sum_gamesales_by_territory(sales, key)
 
     return sum_sales_by_platform
+
+# Egy üres lista létrehozása
+# Iterálás a get_gamesales_by_platforms() által kapott listán.
+# Új dictionary létrehozása egy platform eladásainak az összegéről.
+# A kész dictionary hozzáadása a listához.
+
+def create_platform_sales(platform_sales, sales_keys):
+    sum_platform_sales_list = []
+
+    for platform_sale in platform_sales:
+        sum_sales_by_platform = sum_platform_sales(platform_sale.items(), sales_keys)
+        sum_platform_sales_list.append(sum_sales_by_platform)
+
+    return sum_platform_sales_list
