@@ -1,3 +1,4 @@
+import data_conversion
 
 # Set létrehozása a platformoknak
 # Iterálás a beolvasott listán és a különböző platformok összegyűjtése
@@ -73,3 +74,8 @@ def create_platform_sales(platform_sales, sales_keys):
         sum_platform_sales_list.append(sum_sales_by_platform)
 
     return sum_platform_sales_list
+
+
+platform_sales_list = create_platform_sales(
+    get_gamesales_by_platforms(data_conversion.video_game_sales),
+    data_conversion.sales_keys)

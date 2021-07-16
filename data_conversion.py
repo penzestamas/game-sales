@@ -1,3 +1,5 @@
+import file_handler
+
 # 1. lista létrehozása a kulcsoknak 
 # 2. iterálás az eredeti kulcsokon 
 # 3. csak a Sales stringet tartalmazó kulcsok összegyűjtése 
@@ -21,3 +23,7 @@ def modify_sales_numbers(list_of_dicts):
             data_dict[key] = float(data_dict[key])
         modified_list.append(data_dict)
     return tuple(modified_list)
+
+
+video_game_sales = modify_sales_numbers(file_handler.get_dicts_from_csv('vg_sales.csv'))
+sales_keys = get_sales_keys(video_game_sales)
